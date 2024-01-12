@@ -14,6 +14,7 @@ function App() {
         <div>
             <Header/>
             <a href="https://youtu.be/kz23xxukY5s?t=4876">Lesson</a>
+            <h1>ТУТ ПРОДОЛЖЕНИЕ</h1>
             <main>
                 <section>
                     <h3>Наш подход к обучению</h3>
