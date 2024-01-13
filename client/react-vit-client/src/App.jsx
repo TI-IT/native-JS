@@ -1,15 +1,20 @@
+import {useState} from "react";
 import './index.css'
 import Header from "./components/Header.jsx";
-import {ways} from './data/data.js'
+import {ways, differences} from './data/data.js'
 import WayToTeach from "./components/WayToTeach.jsx";
 import Button from "./components/Button/Button.jsx";
 
+
 function App() {
-    let content = 'Нажми на кнопку'
-    function handleClick(type){
-        console.log('Handle Click', type)
-        content = type
+    var [content, setContent] = useState('Нажми на кнопку')
+
+    console.log("App RENDER")
+    function handleClick(type) {
+        setContent(type)
+        console.log(content)
     }
+
     return (
         <div>
             <Header/>
@@ -41,11 +46,11 @@ function App() {
                     <Button onClick={() => handleClick('easy')}>Доступность</Button>
                     <Button onClick={() => handleClick('program')}>Концентрация</Button>
 
-                    <p>{content}</p>
+                    <p>{differences[content]}</p>
                 </section>
-          </main>
-      </div>
-  )
+            </main>
+        </div>
+    )
 }
 
 export default App
